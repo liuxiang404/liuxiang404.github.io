@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
+    <Script>
+        let time1=new Date();
+    </Script>
     <style>
         *{
             border: 3px solid salmon;
@@ -30,16 +32,19 @@
     <div id="div1">文本1</div>    
     <div id="div2">文本2</div>   
     <div id="div3"  class="div31">文本3</div>
-        <Script>
-        let time1=new Date();
-    </Script>
     <script> 
+        let mybody=document.querySelector('body');
+        mybody.style.height=innerHeight-18+"px";
         let mydiv=document.querySelector('div');
         mydiv.style.width=200+"px";
+        let mydiv2=document.querySelector('#div2');
+        mydiv2.style.width=200+"px";
+        let mydiv3=document.querySelector('.div31');
+        mydiv3.style.width=300+"px";
         let suiji=Math.floor(Math.random()*100);
         console.log(suiji);
         mydiv.textContent="幸运数字："+suiji;
-        mydiv1.textContent="整个执行完毕耗时："+(new Date()-time1)+"ms";
+        mydiv2.textContent="整个执行完毕耗时："+(new Date()-time1)+"ms";
     </script>
 </body>
 </html>
