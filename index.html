@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            border: 3px solid salmon;
+            margin: 0;
+            background-color: antiquewhite;
+        }
+        #div1{
+            height: 25%;
+            background-color: rgb(130, 133, 167);
+        }       
+        #div2{
+            height: 50%;
+            background-color: rgb(138, 48, 171);
+        }        
+        #div3{
+            height: 25%;
+            background-color: rgb(12, 228, 52);
+        }
+    </style>
+</head>
+<body> 
+    
+    <div id="div1">文本1</div>    
+    <div id="div2">文本2</div>   
+    <div id="div3"  class="div31">文本3</div>
+        <Script>
+        let time1=new Date();
+    </Script>
+    <script> 
+        let mydiv=document.querySelector('div');
+        mydiv.style.width=200+"px";
+        let suiji=Math.floor(Math.random()*100);
+        console.log(suiji);
+        mydiv.textContent="幸运数字："+suiji;
+        mydiv1.textContent="整个执行完毕耗时："+(new Date()-time1)+"ms";
+    </script>
+</body>
+</html>
