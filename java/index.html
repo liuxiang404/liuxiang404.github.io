@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <Script>
+        let time1=new Date();
+    </Script>
+    <style>
+        *{
+            border: 3px solid salmon;
+            margin: 0;
+            background-color: antiquewhite;
+        }
+        #div1{
+            height: 25%;
+            background-color: rgb(130, 133, 167);
+        }       
+        #div2{
+            height: 50%;
+            background-color: rgb(138, 48, 171);
+        }        
+        #div3{
+            height: 25%;
+            background-color: rgb(12, 228, 52);
+            text-align: center;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+<body> 
+    
+    <div id="div1">文本1</div>    
+    <div id="div2">文本2</div>   
+    <div id="div3"  class="div31">
+        <p id="yw">单词英文</p>
+        <p id="dy">单词读音</p>
+        <p id="zs">单词注释</p>
+        <button id="sx">刷新单词</button>
+    </div>
+    <script> 
+        let mybody=document.querySelector('body');
+        mybody.style.height=innerHeight-18+"px";
+        let mydiv=document.querySelector('div');
+        mydiv.style.width=200+"px";
+        let mydiv2=document.querySelector('#div2');
+        mydiv2.style.width=200+"px";
+        let suiji=Math.floor(Math.random()*100);
+        console.log(suiji);
+        mydiv.textContent="幸运数字："+suiji;
+        mydiv2.textContent="整个执行完毕耗时："+(new Date()-time1)+"ms";
+        let cet6String = "a	/ei/	art.一(个);每一(个);(同类事物中)任一个\r\nabandon	/ə'bændən/	vt.离弃,丢弃;遗弃,抛弃;放弃\r\nabdomen	/æb'dəumen/	n.腹,下腹(胸部到腿部的部分)\r\nabatement	/ə'beitmənt/	n.减(免)税,打折扣,冲销\r\nabide	/ə'baid/	vi.(abode,abided)(by)遵守;坚持;vt.忍受,容忍\r\nability	/ə'biliti/	n.能力;本领;才能,才干;专门技能,天资\r\nable	/'eibl/	a.有(能力、时间、知识等)做某事,有本事的\r\nabnormal	/æb'nɔ:məl/	a.反常的,不正常的,不规则的\r\naboard	/ə'bɔ:d/	ad.&prep.在船(飞机、车)上;ad.上船(飞机、车)\r\nabolish	/ə'bɔliʃ/	vt.废除(法律、习惯等);取消\r\nabound	/ə'baund/	vi.大量存在;(~in,~with)充满,富于\r\nabout	/ə'baut/	ad.在周围;大约prep.关于;在周围a.准备\r\nabove	/ə'bʌv/	a.上述的ad.在上面,在前文prep.在..之上,高于\r\nabroad	/ə'brɔ:d/	ad.到国外,在国外;在传播,在流传\r\n";
+        //let sx=selet('button#sx');
+        let arr=cet6String.split('\r\n');
+     
+        sx.onclick=function() {
+        let rand=Math.floor(Math.random()*arr.length);
+        let str=arr[rand];
+        let str1=str.indexOf('\t');
+        let str2=str.lastIndexOf('\t');
+        let yw=str.slice(0,str1);
+        let dy=str.slice(str1=1,str2);
+        let zs=str.slice(str2+1);
+        select('p#yw').textContent=yw;
+        select('p#dy').textContent=dy;
+        select('p#zs').textContent=zs;
+        console.log("jdabjdha");
+};   
+function select(selector){
+        let dom = document.querySelector(selector) ;
+        return dom ;
+      }
+    </script>
+</body>
+</html>
