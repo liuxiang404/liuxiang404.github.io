@@ -61,16 +61,24 @@
 
     }
     select('button#a003').onclick = function(){
-        Model.pos = CET6.length - 1  ;
-        Model.printWord() ;
-        select("#a1").textContent = "已跳转到下个单词";
-
+    if( Model.pos < CET6.length -1){
+      Model.pos ++ ;
+    }else{
+      Model.pos = 0 ;
     }
-    select('button#a004').onclick = function(){
-        Model.pos = CET6.length + 1  ;
-        Model.printWord() ;
-        select("#a1").textContent = "已跳转到上个单词";
+    Model.printWord() ;
+    select("#a1").textContent = "已跳转到下个单词";
+  }
 
+  select('button#a004').onclick = function(){
+    if( Model.pos > 0){
+      Model.pos -- ;
+    }else{
+      Model.pos = CET6.length ;
     }
+    Model.printWord() ;
+    select("#a1").textContent = "已跳转到上个单词";
+  }
+       
 </script>
 </html>
