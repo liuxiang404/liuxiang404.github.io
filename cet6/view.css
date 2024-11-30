@@ -1,0 +1,252 @@
+/* 全局样式重置，去除浏览器默认边距和内边距 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f5f9;
+    /* 更清新的淡蓝色背景，使页面整体更柔和 */
+    font-size: calc(10px + 1vh);
+    height: 98vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* 让各主要部分在垂直方向均匀分布 */
+}
+
+header {
+    background-color: #2c3e50;
+    /* 深蓝色头部，与整体风格协调且突出 */
+    color: white;
+    font-size: 2em;
+    height: 15%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 让文字在头部垂直居中 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* 添加淡淡的阴影，增加层次感 */
+}
+
+header span#response {
+    font-size: 0.8em;
+    color: red;
+    position: absolute;
+    right: 0.5em;
+    top: 2em;
+}
+
+nav {
+    background-color: #34495e;
+    /* 稍深于主体背景的蓝色导航栏 */
+    height: 6%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 让按钮在导航栏垂直居中 */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    /* 添加淡淡的阴影 */
+}
+
+nav button {
+    font-size: 1.2em;
+    margin: 0 5px;
+    /* 按钮之间添加一点间距 */
+    padding: 0.1em 0.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    background-color: #5dade2;
+    /* 浅蓝色按钮，与整体色调协调且突出 */
+    transition: background-color 0.3s ease;
+    /* 添加过渡效果，用于按钮按下或悬停时变色 */
+}
+
+nav button.small {
+    width: 30%;
+    padding: 0.1em 0.2em;
+}
+
+nav button.big {
+    width: 45%;
+    padding: 0.1em 0.5em;
+}
+
+nav button:hover,
+nav button:active {
+    background-color: #45b3d7;
+    /* 按钮悬停或按下时的背景色变化，加深蓝色调 */
+}
+
+main {
+    margin-top: 1em;
+    font-size: 1.6em;
+    height: 60%;
+    position: relative;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* 添加更明显的阴影效果 */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* 让内部元素在垂直方向均匀分布 */
+}
+
+main p#en {
+    font-size: 1.6em;
+    color: #1abc9c;
+    /* 更鲜明的蓝绿色，用于突出英文单词 */
+    text-shadow: 2px 2px #ecf0f1;
+    /* 更柔和的文本阴影颜色 */
+}
+
+main p#pn {
+    font-size: 1.2em;
+    color: #2ecc71;
+    /* 鲜绿色，用于区分词性等信息 */
+}
+
+main span#level {
+    font-weight: bold;
+    color: #34495e;
+    /* 与导航栏颜色一致，保持整体风格协调 */
+    margin-bottom: 10px;
+    /* 添加底部外边距，使其与下方内容有间隔 */
+    display: inline-block;
+    /* 修改为内联块元素，使其与文本流更好融合 */
+    position: static;
+    /* 去除绝对定位，使其在文本流中正常排列 */
+    right: auto;
+    top: auto;
+    font-size: 0.8em;
+    /* 适当增大字体大小，使其更易读 */
+}
+
+main p.cn {
+    border: 1px solid #1abc9c;
+    /* 与英文单词颜色呼应的蓝绿色边框 */
+    background-color: #f0f5f9;
+    /* 与页面背景色相近，突出时更协调 */
+    cursor: pointer;
+    font-size: 0.8em;
+    margin-bottom: 0.2em;
+    padding: 5px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    /* 添加过渡效果，用于悬停时变色 */
+}
+
+main p.cn:hover {
+    background-color: #d5f5e3;
+    /* 悬停时的背景色变化，更清新的淡绿色 */
+    color: #1abc9c;
+    /* 悬停时文本颜色变为蓝绿色，与边框呼应 */
+}
+
+main p.cn.right {
+    background-color: #2ecc71;
+    /* 回答正确时的鲜绿色背景 */
+    color: white;
+}
+
+main p.cn.wrong {
+    background-color: #e74c3c;
+    /* 回答错误时的红色背景 */
+    color: white;
+}
+
+main hr {
+    margin: 15px 0;
+    border-color: #bdc3c7;
+    /* 浅灰色的水平分隔线，与整体风格协调 */
+}
+
+main p#log {
+    background-color: #bdc3c7;
+    /* 浅灰色，与水平分隔线颜色一致，更协调 */
+    color: white;
+    font-size: 0.5em;
+    padding: 5px 10px;
+    text-align: right;
+    border-radius: 5px;
+}
+
+form {
+    position: absolute;
+    width: 90%;
+    height: 50%;
+    border: 2px solid #dfe4ea;
+    /* 更柔和的灰色边框 */
+    left: 5%;
+    top: 10%;
+    background-color: white;
+    font-size: 1.1em;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* 添加阴影效果，使其更突出 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* 让表单内部元素在垂直方向和水平方向居中 */
+}
+
+form input {
+    font-size: 1.1em;
+    width: 6em;
+    margin-bottom: 10px;
+    border: 1px solid #dfe4ea;
+    /* 与表单边框颜色一致的输入框边框 */
+    border-radius: 5px;
+    padding: 5px;
+    transition: border-color 0.3s ease;
+    /* 添加过渡效果，用于输入框获取焦点时边框变色 */
+}
+
+form input:focus {
+    border-color: #1abc9c;
+    /* 输入框获取焦点时边框变为蓝绿色 */
+}
+
+form button {
+    font-size: 1.3rem;
+    margin-right: 1em;
+    padding: 0.1em 0.5em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    background-color: #1abc9c;
+    /* 蓝绿色按钮，与英文单词颜色呼应 */
+    transition: background-color 0.3s ease;
+    /* 添加过渡效果，用于按钮按下时变色 */
+}
+
+form button:hover,
+form button:active {
+    background-color: #16a085;
+    /* 按钮悬停或按下时的背景色变化，加深蓝绿色调 */
+}
+
+footer {
+    background-color: #2c3e50;
+    /* 深蓝色，与头部风格一致 */
+    color: white;
+    height: 20%;
+    font-size: 1.2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 让文字在底部垂直居中 */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    /* 添加淡淡的阴影，与头部阴影相呼应 */
+}
