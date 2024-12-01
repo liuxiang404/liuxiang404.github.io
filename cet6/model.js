@@ -19,12 +19,12 @@
           obj.cn = wordArr[2] ;
           let enlength = obj.en.length ;
           if(enlength > 1 && enlength < 5){
-            obj.level = 1 ;
+            obj.level = "简单" ;
           }else{
             if(enlength < 8 ){
-                obj.level = 2 ;
+                obj.level = "一般" ;
             }else{
-                obj.level = 3 ;
+                obj.level = "困难" ;
             }
           }
           Model.CET6.push(obj) ;
